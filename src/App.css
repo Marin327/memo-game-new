@@ -1,0 +1,132 @@
+/* Основен фон и текст */
+body {
+  background: linear-gradient(to bottom right, #1e293b, #334155);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Заглавие */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Стилизация на контейнерите */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Клас за заглавието в хедъра */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Стилизация на картите */
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #2d3748;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card.flipped,
+.card.matched {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+/* Текущи състояния за картите */
+.card-content {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card:not(.flipped):not(.matched):hover {
+  background-color: #2b6cb0;
+}
+
+/* Таймер */
+.timer {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #f6ad55;
+}
+
+/* Панел за резултати */
+.score-panel {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Кнопка за рестарт */
+.reset-button {
+  background-color: #ed8936;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #dd6b20;
+}
+
+/* Стил за съобщение за победа */
+.win-message {
+  font-size: 2rem;
+  color: #48bb78;
+  margin-top: 1rem;
+  display: none;
+}
+
+/* Покажи съобщението за победа */
+.win-message.active {
+  display: block;
+}
+
+/* Анимация за логото */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
